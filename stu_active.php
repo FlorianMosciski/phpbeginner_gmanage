@@ -1,6 +1,6 @@
 <?php
-/**
-*2012-7-31  |  By:NaV!
+/!*
+*2012-7-31! |  By:NaV!
 */
 //防止恶意调用
 define('IN_GM',true);
@@ -86,7 +86,7 @@ if($num==0){
 	for($i=1;$i<=$pagesize;$i++){
 		$rows=_fetch_array_list($res);
 		if($rows['gm_num']=='')break;
-		echo "<tr><td>$i</td><td>{$rows['gm_username']}</td><td>{$rows['gm_num']}</td><td>{$rows['gm_sex']}</td><td>{$rows['gm_grade']}</td><td>{$rows['gm_subject']}</td><td>{$rows['gm_type']}</td><td><a href='stu_date_one.php?num={$rows['gm_num']}'>详情</a> <a href='###' onclick=_confirm('确定审核通过吗？','stu_active.php?action=pass&num={$rows['gm_num']}')>通过</a> <a href='###' onclick=_confirm('确定删除吗？','stu_active.php?action=del&num={$rows['gm_num']}')>删除</a></td></tr>";
+		echo "<tr><td>$i</td><td>{$rows['gm_username']}</td><td>{$rows['gm_num']}</td><td>{$rows['gm_sex']}</td><td>{$rows['gm_grade']}</td><td>{$rows['gm_subject']}</td><td>{$rows['gm_type']}</td><td><a href='stu_date_one.php?num={$rows['gm_num']}'>详情</a> <a href='*##' onclick=_confirm('确定审核通过吗？','stu_active.php?action=pass&num={$rows['gm_num']}')>通过</a> <a href='###' onclick=_confirm('确定删除吗？','stu_active.php?action=del&num={$rows['gm_num']}')>删除</a></td></tr>";
 	}	
 	?>
 	</tbody>
@@ -104,4 +104,4 @@ echo "<p class='record'>共有<span>$num</span>位用户需要审核</p>";
 	require ROOT_PATH.'includes/footer_admin.inc.php';
 ?>
 </body>
-</html>
+</html> 
